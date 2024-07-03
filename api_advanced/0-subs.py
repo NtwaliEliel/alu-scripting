@@ -22,17 +22,3 @@ def number_of_subscribers(subreddit):
             return 0
     except requests.RequestException:
         return 0
-
-
-# Example usage:
-if __name__ == '__main__':
-    """
-    Importing module sys to get information
-    from terminal.
-    """
-    import sys
-
-    if len(sys.argv) < 2:
-        print("Please pass an argument for the subreddit to search.")
-    else:
-        print("{:d}".format(number_of_subscribers(sys.argv[1])))
