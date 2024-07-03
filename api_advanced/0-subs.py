@@ -1,14 +1,11 @@
 #!/usr/bin/python3
-
 """
 Importing required modules.
 """
-
 import requests
 
 
 def number_of_subscribers(subreddit):
-
     """number_of_subscribers returns number of subscribers."""
 
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
