@@ -26,3 +26,15 @@ def number_of_subscribers(subreddit):
     except requests.exceptions.RequestException as e:
         print(f"An error occurred while fetching subscriber count: {e}")
         return 0
+
+
+# Example usage (assuming 0-subs_1.py is saved in the same directory)
+if __name__ == '__main__':
+    import sys
+
+    if len(sys.argv) < 2:
+        print("Please pass an argument for the subreddit to search.")
+    else:
+        subreddit = sys.argv[1]
+        subscribers = number_of_subscribers(subreddit)
+        print(f"Subscribers for '{subreddit}': {subscribers}")
