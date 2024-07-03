@@ -9,7 +9,6 @@ import requests
 
 def number_of_subscribers(subreddit):
     """number_of_subscribers returns number of subscribers."""
-
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     headers = {'User-Agent': 'Mozilla/5.0 (compatible; Bot/1.0)'}
     try:
