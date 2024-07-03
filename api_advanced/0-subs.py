@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Importing required modules.
+Importing Required Modules like request.
+in order to get number if subscribers of reddit
 """
 
 
@@ -25,7 +26,12 @@ def number_of_subscribers(subreddit):
 
 # Example usage:
 if __name__ == '__main__':
+    """
+    Importing module sys to get information
+    from terminal.
+    """
     import sys
+
     if len(sys.argv) < 2:
         print("Please pass an argument for the subreddit to search.")
     else:
