@@ -61,7 +61,7 @@ def count_words(subreddit, word_list, hot_list=[], after=None, word_count=None):
 
         # Print results
         for word, count in sorted_word_count:
-            print(f"{word}: {count}")
+            print("{}: {}".format(word, count))
 
     except Exception as e:
         return
