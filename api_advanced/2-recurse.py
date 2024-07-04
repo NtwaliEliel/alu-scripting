@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 
 """
-This module defines a recursive function to fetch the titles of all hot articles
+This module defines a recursive function
+that fetch the titles of all hot articles
 from a given subreddit using the Reddit API.
-
-The main function `recurse` fetches the data recursively by handling pagination
-through the `after` parameter provided by the API.
 """
 
 import requests
@@ -21,7 +19,8 @@ def recurse(subreddit, hot_list=[], after=None):
     params = {'after': after} if after else {}
 
     try:
-        response = requests.get(url, headers=headers, params=params, allow_redirects=False)
+        response = requests.get(
+            url, headers=headers, params=params, allow_redirects=False)
 
         # Check if the subreddit exists
         if response.status_code == 404:
