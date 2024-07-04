@@ -16,7 +16,7 @@ def recurse(subreddit, hot_list=[], after=None):
     Recursively queries the Reddit API and returns a list containing the titles
     of all hot articles for a given subreddit.
     """
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {'User-Agent': 'Mozilla/5.0'}
     params = {'after': after} if after else {}
 
